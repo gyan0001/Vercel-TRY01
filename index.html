@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air New Zealand - Premium Travel Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">Air <span>New Zealand</span></a>
+            <ul class="nav-links">
+                <li><a href="#book">Book</a></li>
+                <li><a href="#manage">Manage</a></li>
+                <li><a href="#checkin">Check in</a></li>
+                <li><a href="#flightinfo">Flight info</a></li>
+                <li><a href="#airpoints">Airpoints</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Notification Banner -->
+    <div class="notification-banner">
+        ✨ Special Offer: Save up to 30% on Pacific destinations. <a href="#">Book now</a>
+    </div>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="book">
+        <div class="booking-container">
+            <div class="booking-tabs">
+                <button class="booking-tab active">Return</button>
+                <button class="booking-tab">One-way</button>
+                <button class="booking-tab">Multi-city</button>
+            </div>
+            
+            <div class="booking-form">
+                <div class="booking-header">
+                    <h2>Where would you like to go?</h2>
+                    <div class="booking-actions">
+                        <a href="#manage">Manage booking →</a>
+                        <a href="#checkin">Check in →</a>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>From</label>
+                        <input type="text" class="form-input" placeholder="City or Airport" id="fromInput">
+                    </div>
+                    <div class="form-group">
+                        <label>To</label>
+                        <input type="text" class="form-input" placeholder="City or Airport" id="toInput">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Departure</label>
+                        <input type="date" class="form-input" id="departureDate">
+                    </div>
+                    <div class="form-group">
+                        <label>Return</label>
+                        <input type="date" class="form-input" id="returnDate">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Passengers</label>
+                        <select class="form-input" id="passengers">
+                            <option>1 Adult</option>
+                            <option>2 Adults</option>
+                            <option>1 Adult, 1 Child</option>
+                            <option>2 Adults, 1 Child</option>
+                            <option>2 Adults, 2 Children</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>&nbsp;</label>
+                        <button class="continue-btn" id="searchFlights">
+                            <i class="fas fa-search"></i>
+                            Search Flights
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions Section -->
+    <section class="quick-actions-section">
+        <div class="quick-actions-container">
+            <h2>Quick Actions</h2>
+            <div class="quick-actions-grid">
+                <div class="quick-action-card" data-action="flight-status">
+                    <div class="quick-action-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <h3>Flight Status</h3>
+                    <p>Check real-time flight information</p>
+                </div>
+                <div class="quick-action-card" data-action="web-checkin">
+                    <div class="quick-action-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Web Check-in</h3>
+                    <p>Check in online 24 hours before</p>
+                </div>
+                <div class="quick-action-card" data-action="manage-booking">
+                    <div class="quick-action-icon">
+                        <i class="fas fa-suitcase"></i>
+                    </div>
+                    <h3>Manage Booking</h3>
+                    <p>Change flights or add services</p>
+                </div>
+                <div class="quick-action-card" data-action="flight-info">
+                    <div class="quick-action-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3>Flight Info</h3>
+                    <p>Timetables and airport info</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="promo-section">
+        <div class="promo-container">
+            <h2>Discover Your Next Adventure</h2>
+            <p class="promo-subtitle">Explore our most popular destinations with exclusive offers</p>
+            
+            <div class="promo-grid">
+                <div class="promo-card">
+                    <div class="promo-image" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')">
+                        <div class="promo-badge">Popular</div>
+                    </div>
+                    <div class="promo-content">
+                        <h3>Bali, Indonesia</h3>
+                        <p>From NZ$699 return</p>
+                        <div class="promo-features">
+                            <span><i class="fas fa-clock"></i> 10h flight</span>
+                            <span><i class="fas fa-utensils"></i> Meals included</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <div class="promo-image" style="background-image: url('https://images.unsplash.com/photo-1536522751281-p06ad3bc8e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')">
+                        <div class="promo-badge">Business</div>
+                    </div>
+                    <div class="promo-content">
+                        <h3>Singapore</h3>
+                        <p>From NZ$899 return</p>
+                        <div class="promo-features">
+                            <span><i class="fas fa-clock"></i> 11h flight</span>
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <div class="promo-image" style="background-image: url('https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80')">
+                        <div class="promo-badge">Luxury</div>
+                    </div>
+                    <div class="promo-content">
+                        <h3>Paris, France</h3>
+                        <p>From NZ$1,899 return</p>
+                        <div class="promo-features">
+                            <span><i class="fas fa-clock"></i> 24h flight</span>
+                            <span><i class="fas fa-bed"></i> Lie-flat beds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flight Info Modal -->
+    <div class="flight-info-modal" id="flightInfoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Flight Details</h3>
+                <button class="close-modal" id="closeFlightModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="flightModalBody">
+                <!-- Flight details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Book & Manage</h4>
+                <a href="#">Flights</a>
+                <a href="#">Accommodation</a>
+                <a href="#">Rental Cars</a>
+                <a href="#">Manage Booking</a>
+            </div>
+            <div class="footer-section">
+                <h4>Flight Info</h4>
+                <a href="#">Flight Status</a>
+                <a href="#">Timetables</a>
+                <a href="#">Travel Alerts</a>
+                <a href="#">Airports</a>
+            </div>
+            <div class="footer-section">
+                <h4>Help</h4>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Baggage</a>
+                <a href="#">Special Assistance</a>
+            </div>
+            <div class="footer-section">
+                <h4>Airpoints</h4>
+                <a href="#">Join Airpoints</a>
+                <a href="#">Earn & Spend</a>
+                <a href="#">Airpoints Partners</a>
+                <a href="#">Status</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Air New Zealand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chat Bot -->
+    <div class="chatbot-container">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h3>Air NZ Assistant</h3>
+                <div class="chat-status">
+                    <span class="status-online">● Online</span>
+                </div>
+                <button class="close-chat" id="closeChat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chatBox">
+                <div class="message bot">
+                    Kia ora! I'm Aria, your Air New Zealand assistant. I can help you with flight bookings, check flight status, provide pricing, and answer any travel questions. How can I assist you today?
+                    <div class="message-time" id="welcomeTime"></div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="userInput" placeholder="Ask about flights, destinations, pricing..." autocomplete="off">
+                <button id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        <div class="chatbot-icon" id="chatbotIcon">
+            <i class="fas fa-plane"></i>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

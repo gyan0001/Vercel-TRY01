@@ -1,0 +1,1027 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #2D3748;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Premium Header Styles */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    color: #2D3748;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-bottom: none;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2D3748;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: #4A5568;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #667eea;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Enhanced Notification Banner */
+.notification-banner {
+    background: linear-gradient(135deg, #FF6B6B, #EE5A24);
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 0.9rem;
+    margin-top: 76px;
+    font-weight: 500;
+}
+
+.notification-banner a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Premium Booking Section */
+.booking-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    color: white;
+    padding: 100px 2rem 80px;
+    margin-top: 0;
+    border-radius: 0 0 30px 30px;
+}
+
+.booking-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.booking-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 2.5rem;
+    background: rgba(255,255,255,0.15);
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.booking-tab {
+    padding: 18px 35px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.booking-tab.active {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+}
+
+.booking-tab:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.booking-form {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+.booking-header h2 {
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.booking-actions {
+    display: flex;
+    gap: 2rem;
+}
+
+.booking-actions a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+}
+
+.booking-actions a:hover {
+    border-color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #4A5568;
+    font-size: 1rem;
+}
+
+.form-input {
+    padding: 16px 20px;
+    border: 2px solid #E2E8F0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.continue-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 18px 45px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.continue-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+/* Enhanced Promo Sections */
+.promo-section {
+    padding: 80px 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.promo-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.promo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.promo-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.promo-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.1));
+}
+
+.promo-content {
+    padding: 2rem;
+}
+
+.promo-content h3 {
+    color: #2D3748;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Premium Chat Bot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+}
+
+.chatbot-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    border: 4px solid white;
+    animation: premiumGlow 3s infinite alternate;
+}
+
+@keyframes premiumGlow {
+    from {
+        box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4),
+                    0 0 40px rgba(102, 126, 234, 0.2);
+    }
+    to {
+        box-shadow: 0 20px 45px rgba(102, 126, 234, 0.6),
+                    0 0 60px rgba(102, 126, 234, 0.4),
+                    0 0 80px rgba(102, 126, 234, 0.2);
+    }
+}
+
+.chatbot-icon:hover {
+    transform: scale(1.15) rotate(5deg);
+    animation: none;
+    box-shadow: 0 25px 50px rgba(102, 126, 234, 0.6),
+                0 0 80px rgba(102, 126, 234, 0.4);
+}
+
+.chatbot-icon i {
+    color: white;
+    font-size: 2rem;
+}
+
+/* Enhanced Chat Window */
+.chat-window {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    width: 420px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.chat-window.active {
+    display: flex;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.chat-header h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.chat-status {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.status-online {
+    color: #68D391;
+}
+
+.close-chat {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-chat:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message {
+    max-width: 85%;
+    padding: 16px 22px;
+    border-radius: 22px;
+    position: relative;
+    animation: messageSlide 0.3s ease;
+    word-wrap: break-word;
+    line-height: 1.5;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+@keyframes messageSlide {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.message.user {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 8px;
+}
+
+.message.bot {
+    background: white;
+    color: #2D3748;
+    align-self: flex-start;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.message.typing {
+    background: rgba(255,255,255,0.8);
+    color: #718096;
+    font-style: italic;
+}
+
+.message-time {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-top: 8px;
+    text-align: right;
+    font-weight: 500;
+}
+
+.chat-input-container {
+    display: flex;
+    padding: 20px;
+    background: white;
+    border-top: 1px solid rgba(102, 126, 234, 0.1);
+    gap: 12px;
+}
+
+#userInput {
+    flex: 1;
+    padding: 16px 22px;
+    border-radius: 25px;
+    border: 2px solid #E2E8F0;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+#userInput:focus {
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+#sendBtn {
+    padding: 16px 24px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    min-width: 90px;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+#sendBtn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+#sendBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Enhanced Typing Animation */
+.typing-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    animation: typingBounce 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typingBounce {
+    0%, 80%, 100% { 
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    40% { 
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Flight Info Styling in Messages */
+.flight-info {
+    background: rgba(102, 126, 234, 0.05);
+    border-left: 4px solid #667eea;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+}
+
+.flight-detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+.flight-price {
+    font-weight: 700;
+    color: #667eea;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .booking-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+    
+    .chat-window {
+        width: 350px;
+        height: 500px;
+        right: 10px;
+        bottom: 80px;
+    }
+    
+    .chatbot-icon {
+        width: 70px;
+        height: 70px;
+        right: 20px;
+        bottom: 20px;
+    }
+    
+    .promo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-window {
+        width: 320px;
+        height: 450px;
+    }
+    
+    .booking-form {
+        padding: 2rem;
+    }
+    
+    .promo-section {
+        padding: 60px 1rem;
+    }
+}
+/* Quick Actions Section */
+.quick-actions-section {
+    padding: 60px 2rem;
+    background: white;
+}
+
+.quick-actions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quick-actions-container h2 {
+    color: #2D3748;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.quick-action-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.quick-action-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    border-color: rgba(102, 126, 234, 0.2);
+}
+
+.quick-action-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #667eea;
+}
+
+.quick-action-card h3 {
+    color: #2D3748;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.quick-action-card p {
+    color: #718096;
+    line-height: 1.6;
+}
+
+/* Flight Info Modal */
+.flight-info-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 2rem;
+}
+
+.flight-info-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 25px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 1rem;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+.modal-header h3 {
+    color: #2D3748;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #718096;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+/* Flight Detail Modal Styles */
+.flight-detail-modal {
+    color: #2D3748;
+}
+
+.flight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.flight-header h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.flight-status {
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.flight-status.landed {
+    background: #C6F6D5;
+    color: #22543D;
+}
+
+.flight-status.scheduled {
+    background: #BEE3F8;
+    color: #1A365D;
+}
+
+.route-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 15px;
+}
+
+.route-segment {
+    text-align: center;
+    flex: 1;
+}
+
+.airport {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2D3748;
+    margin-bottom: 0.5rem;
+}
+
+.time {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+}
+
+.date, .terminal {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.route-duration {
+    text-align: center;
+    flex: 0 0 100px;
+}
+
+.duration {
+    font-weight: 600;
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+.route-line {
+    height: 2px;
+    background: #667eea;
+    position: relative;
+}
+
+.route-line::before {
+    content: '✈️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 0 8px;
+}
+
+.flight-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.detail-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.detail-item label {
+    display: block;
+    color: #718096;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.detail-item span {
+    font-weight: 600;
+    color: #2D3748;
+}
+
+.pricing-section h5 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #2D3748;
+}
+
+.fare-options {
+    display: grid;
+    gap: 1rem;
+}
+
+.fare-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border: 2px solid #E2E8F0;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.fare-option:hover {
+    border-color: #667eea;
+    transform: translateX(5px);
+}
+
+.fare-class {
+    font-weight: 600;
+    color: #2D3748;
+}
+
+.fare-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.select-fare {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.select-fare:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Promo badges */
+.promo-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    background: rgba(102, 126, 234, 0.9);
+    color: white;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.promo-features {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.promo-features span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #718096;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+}
+
+/* Enhanced message styles for flight info */
+.message .flight-price {
+    font-weight: 700;
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+/* Responsive design for modal */
+@media (max-width: 768px) {
+    .flight-info-modal {
+        padding: 1rem;
+    }
+    
+    .modal-content {
+        max-height: 95vh;
+    }
+    
+    .route-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .fare-option {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .quick-actions-grid {
+        grid-template-columns: 1fr;
+    }
+}
